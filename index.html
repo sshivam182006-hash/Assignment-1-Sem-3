@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Driven Architecture Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛒 Event-Driven Flow Simulator</h1>
+        <p>Observe how Node.js style events trigger subsequent application actions.</p>
+    </header>
+
+    <main class="container">
+        <!-- Left Side: Interactive Buttons -->
+        <section class="control-panel">
+            <h2>🎛️ Simulation Controls</h2>
+            
+            <div class="card">
+                <h3>1. User Onboarding</h3>
+                <button id="btn-register" class="btn btn-primary">Trigger 'userRegistered'</button>
+            </div>
+
+            <div class="card">
+                <h3>2. Successful Purchase Chain</h3>
+                <button id="btn-order-success" class="btn btn-success">Trigger 'orderCreated' (Success Path)</button>
+            </div>
+
+            <div class="card">
+                <h3>3. Failed/Cancelled Purchase Chain</h3>
+                <button id="btn-order-fail" class="btn btn-danger">Trigger 'orderCreated' (Failure Path)</button>
+            </div>
+        </section>
+
+        <!-- Right Side: Live Logs Output -->
+        <section class="log-panel">
+            <div class="log-header">
+                <h2>📜 Live Event Log</h2>
+                <button id="btn-clear" class="btn-clear">Clear Logs</button>
+            </div>
+            <div id="log-output" class="log-output">
+                <div class="system-msg">System initialized. Click a control button to start emitting events...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
